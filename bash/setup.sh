@@ -17,7 +17,6 @@ export PATH="$PATH:/usr/local/share/npm/bin:$DOTFILES/bin"
 
 # Load colors first so they can be use in base theme
 source "${DOTFILES}/bash/themes/colors.theme.bash"
-source "${DOTFILES}/bash/themes/base.theme.bash"
 
 # library
 LIB="${DOTFILES}/bash/lib/*.bash"

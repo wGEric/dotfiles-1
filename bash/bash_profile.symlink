@@ -12,10 +12,7 @@ export PATH="$PATH:~/.bin"
 # add MySQL bin
 export PATH="$PATH:/usr/local/mysql/bin"
 
-export BASH_THEME="daniel"
+export BASH_THEME="eric"
 
 source $DOTFILES/bash/setup.sh
 
-export PATH=~/pebble-dev/PebbleSDK-2.0-BETA6/bin:$PATH
-
-export DOCKER_HOST=tcp://:4242
