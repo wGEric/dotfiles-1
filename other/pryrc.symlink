@@ -20,7 +20,7 @@ end
 # $ gem install pry-theme
 # $ pry
 # $ pry-theme install tomorrow-night
- Pry.config.theme = 'tomorrow-night'
+ Pry.config.theme = 'solarized'
 
 # Set awesome_print as the default formatter
 # https://github.com/michaeldv/awesome_print/

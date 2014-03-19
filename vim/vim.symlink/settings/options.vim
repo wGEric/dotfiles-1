@@ -39,6 +39,8 @@ set sidescroll=3
 
 " ================ Indentation ======================
 
+set foldmethod=indent
+set foldlevelstart=9999
 set autoindent
 set backspace=2
 set shiftwidth=2
@@ -48,7 +50,8 @@ set expandtab
 
 set wrap
 set linebreak
-set nolist
+"set nolist
+"set breakat=" ^I!@*-+;,./?"
 
 " ===================================================
 
@@ -64,7 +67,7 @@ set vb t_vb= " Turn off the bell, this could be more annoying, but I'm not sure 
 " More sane colors of matching brackets and parens
 " highlight MatchParen cterm=bold ctermbg=bg ctermfg=Red
 
-highlight ShowTrailingWhitespace ctermbg=Black guibg=Black
+"highlight ShowTrailingWhitespace ctermbg=Red guibg=Red
 "highlight ExtraWhitespace ctermbg=DarkGreen guibg=DarkGreen
 "match ExtraWhitespace /\s\+$/
 "autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
@@ -72,6 +75,6 @@ highlight ShowTrailingWhitespace ctermbg=Black guibg=Black
 "autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 "autocmd BufWinLeave * call clearmatches()
 
-"set list
-"set listchars=tab:>.,trail:.,nbsp:.
-"autocmd filetype html,xml set listchars-=tab:>.
+set list
+set listchars=tab:>.,trail:.,nbsp:.
+autocmd filetype html,xml set listchars-=tab:>.
