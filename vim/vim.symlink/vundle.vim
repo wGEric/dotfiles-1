@@ -121,7 +121,7 @@ Bundle 'itspriddle/vim-jquery'
 Bundle 'kchmck/vim-coffee-script'
 " Other Languages
 Bundle 'msanders/cocoa.vim'
-Bundle 'mutewinter/taskpaper.vim'
+"Bundle 'mutewinter/taskpaper.vim'
 Bundle 'mutewinter/nginx.vim'
 Bundle 'timcharper/textile.vim'
 Bundle 'mutewinter/vim-css3-syntax'
@@ -135,7 +135,7 @@ Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 " =================================================
 "
 " =================== Others ======================
-Bundle 'davidoc/taskpaper.vim'
+"Bundle 'davidoc/taskpaper.vim'
 Bundle 'mbbill/VimExplorer'
 Bundle 'danro/rename.vim'
 " =================================================
