@@ -57,12 +57,12 @@ Bundle 'majutsushi/tagbar'
 " Bundle 'scrooloose/syntastic'
 " =================================================
 " ==================== Color ======================
-Bundle 'chriskempson/vim-tomorrow-theme'
+" Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-scripts/molokai'
+" Bundle 'vim-scripts/molokai'
 " Bundle 'danielcbaldwin/Color-Sampler-Pack'
 " Bundle 'altercation/vim-colors-solarized'
-Bundle 'nanotech/jellybeans.vim'
+" Bundle 'nanotech/jellybeans.vim'
 " =================================================
 
 " ===================== UI ========================
@@ -118,6 +118,7 @@ Bundle 'vim-scripts/ruby-matchit'
 Bundle 'pangloss/vim-javascript'
 Bundle 'leshill/vim-json'
 Bundle 'itspriddle/vim-jquery'
+Bundle 'kchmck/vim-coffee-script'
 " Other Languages
 Bundle 'msanders/cocoa.vim'
 Bundle 'mutewinter/taskpaper.vim'
@@ -127,13 +128,16 @@ Bundle 'mutewinter/vim-css3-syntax'
 Bundle 'acustodioo/vim-tmux'
 Bundle 'hallison/vim-markdown'
 Bundle 'groenewege/vim-less'
+Bundle 'cakebaker/scss-syntax.vim'
 " Bundle 'othree/html5-syntax.vim'
 Bundle 'othree/html5.vim'
+Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 " =================================================
 "
 " =================== Others ======================
 Bundle 'davidoc/taskpaper.vim'
 Bundle 'mbbill/VimExplorer'
+Bundle 'danro/rename.vim'
 " =================================================
 if bundles_installed == 0
   echo "Installing Bundles, please ignore key map error messages"
