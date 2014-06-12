@@ -3,3 +3,6 @@
 *.sublime-*
 tags
 .ruby-version
+.jshintrc
+.bundle
+vendor/bundle
