@@ -6,3 +6,4 @@ tags
 .jshintrc
 .bundle
 vendor/bundle
+coverage/

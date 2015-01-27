@@ -113,6 +113,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-endwise'
 
 Bundle 'vim-scripts/ruby-matchit'
+Bundle 'thoughtbot/vim-rspec'
 
 " Javascript
 Bundle 'pangloss/vim-javascript'
