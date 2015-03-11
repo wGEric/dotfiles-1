@@ -42,6 +42,12 @@ Bundle 'kien/ctrlp.vim'
 let g:ctrlp_extensions = ['funky']
 
 Bundle 'tacahiroy/ctrlp-funky'
+Bundle 'FelikZ/ctrlp-py-matcher'
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+if executable("ag")
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --ignore ''vendor/bundle'' --hidden -g ""'
+endif
 
 Bundle 'Lokaltog/vim-easymotion'
 let g:EasyMotion_smartcase = 1
@@ -54,14 +60,13 @@ Bundle 'majutsushi/tagbar'
 " =================================================
 
 " ================== Debugging ====================
-" Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/syntastic'
 " =================================================
 " ==================== Color ======================
 " Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'altercation/vim-colors-solarized'
 " Bundle 'vim-scripts/molokai'
 " Bundle 'danielcbaldwin/Color-Sampler-Pack'
-" Bundle 'altercation/vim-colors-solarized'
 " Bundle 'nanotech/jellybeans.vim'
 " =================================================
 
@@ -92,6 +97,7 @@ let g:airline#extensions#tabline#enabled = 1
 Bundle 'tpope/vim-fugitive'
 
 Bundle 'tpope/vim-surround'
+Bundle 'terryma/vim-multiple-cursors'
 
 Bundle 'tpope/vim-commentary'
   autocmd FileType ruby set commentstring=#\ %s
@@ -111,9 +117,9 @@ Bundle 'vim-ruby/vim-ruby'
   let ruby_operators=1
 
 Bundle 'tpope/vim-endwise'
-
 Bundle 'vim-scripts/ruby-matchit'
 Bundle 'thoughtbot/vim-rspec'
+Bundle 'tpope/vim-rails.git'
 
 " Javascript
 Bundle 'pangloss/vim-javascript'
@@ -139,6 +145,8 @@ Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 "Bundle 'davidoc/taskpaper.vim'
 Bundle 'mbbill/VimExplorer'
 Bundle 'danro/rename.vim'
+Bundle 'vim-scripts/lh-vim-lib'
+Bundle 'LucHermitte/local_vimrc'
 " =================================================
 if bundles_installed == 0
   echo "Installing Bundles, please ignore key map error messages"

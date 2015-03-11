@@ -78,8 +78,8 @@ nnoremap <C-l> :CtrlPFunky<CR>
 nnoremap <C-k> :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 " Easymotion
-nmap s <Plug>(easymotion-s)
-nmap S <Plug>(easymotion-s2)
+" nmap s <Plug>(easymotion-s)
+" nmap S <Plug>(easymotion-s2)
 map f <Plug>(easymotion-f)
 map F <Plug>(easymotion-F)
 nmap <Leader>J <Plug>(easymotion-eol-j)

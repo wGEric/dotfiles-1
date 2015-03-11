@@ -78,3 +78,12 @@ set vb t_vb= " Turn off the bell, this could be more annoying, but I'm not sure 
 set list
 set listchars=tab:>.,trail:.,nbsp:.
 autocmd filetype html,xml set listchars-=tab:>.
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
