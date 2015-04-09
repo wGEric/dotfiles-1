@@ -7,3 +7,5 @@ tags
 .bundle
 vendor/bundle
 coverage/
+.scss-lint.yml
+
