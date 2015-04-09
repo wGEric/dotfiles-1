@@ -1,0 +1,19 @@
+Config { font = "xft:Source Code Pro:6"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = TopW L 100
+       , commands = [ Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
+                    , Run Memory ["-t","Mem: <usedratio>% <usedvbar>"] 10
+                    , Run Swap [] 10
+                    , Run Date "%a %b %_d %l:%M" "date" 10
+                    , Run Network "wlan0" ["-t", "<rx>KB|<tx>KB"] 10
+                    , Run Wireless "wlan0" ["-t","<essid> <qualityvbar>"] 10
+                    , Run Battery ["-t","Batt: <left>% <acstatus>","-L","50","-H","75","-h","green","-n","yellow","-l","red", "--", "-O", "AC", "-o", "<timeleft>", "-f", "ADP0/online"] 10
+                    , Run StdinReader
+                    , Run Com "/bin/bash" ["-c", "~/.xmonad/get-volume"] "myvolume" 10
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %cpu% | %memory% | %wlan0wi% %wlan0% | %battery% | Vol: %myvolume% | <fc=#ee9a00>%date%</fc>"
+       }
+
