@@ -53,6 +53,8 @@ set linebreak
 "set nolist
 "set breakat=" ^I!@*-+;,./?"
 
+set colorcolumn=80
+
 " ===================================================
 
 "set showmatch              " brackets/braces that is
@@ -87,3 +89,7 @@ set statusline+=%*
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
+
+" Neocomplete
+" let g:neocomplete#enable_at_startup = 1
+

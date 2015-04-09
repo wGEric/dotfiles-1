@@ -109,6 +109,7 @@ Bundle 'tpope/vim-commentary'
 " Bundle 'ervandew/supertab'
 Bundle 'airblade/vim-gitgutter'
 "  Bundle 'rstacruz/sparkup'
+" Bundle 'Shougo/neocomplete.vim'
 " =================================================
 
 " ============= Language Additions ================
@@ -126,9 +127,6 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'leshill/vim-json'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'kchmck/vim-coffee-script'
-" Other Languages
-Bundle 'msanders/cocoa.vim'
-"Bundle 'mutewinter/taskpaper.vim'
 Bundle 'mutewinter/nginx.vim'
 Bundle 'timcharper/textile.vim'
 Bundle 'hail2u/vim-css3-syntax'
