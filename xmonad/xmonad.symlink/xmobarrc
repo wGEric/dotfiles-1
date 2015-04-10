@@ -8,7 +8,7 @@ Config { font = "xft:Source Code Pro:6"
                     , Run Date "%a %b %_d %l:%M" "date" 10
                     , Run Network "wlan0" ["-t", "<rx>KB|<tx>KB"] 10
                     , Run Wireless "wlan0" ["-t","<essid> <qualityvbar>"] 10
-                    , Run Battery ["-t","Batt: <left>% <leftvbar> <acstatus>","-L","50","-H","75","-h","green","-n","yellow","-l","red", "--", "-O", "AC", "-o", "<timeleft>", "-f", "ADP0/online"] 10
+                    , Run Battery ["-t","Batt: <left>% <leftvbar> <acstatus>","-L","25","-H","50","-h","green","-n","yellow","-l","red", "--", "-O", "AC", "-o", "<timeleft>", "-f", "ADP0/online"] 10
                     , Run StdinReader
                     , Run Com "/bin/bash" ["-c", "~/.xmonad/get-volume"] "myvolume" 10
                     ]
