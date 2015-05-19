@@ -51,8 +51,19 @@ plugins=(bundler git command-not-found common-aliases docker history node npm ra
 
 # User configuration
 
-export PATH="/usr/local/bin:/home/eric/bin:/home/eric/.rbenv/shims:/home/eric/.rbenv/bin:/opt/texbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/texbin:/usr/local/share/npm/bin:/home/eric/.dotfiles/bin:/usr/local/sbin:~/.bin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/home/eric/.dotfiles/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+# for brew
+export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
+
+# add python scripts bin
+export PATH="$PATH:$HOME/.bin"
+
+# add MySQL bin
+export PATH="$PATH:/usr/local/mysql/bin"
+
+# add dotfiles bin
+export PATH="$PATH:/usr/local/share/npm/bin:$DOTFILES/bin"
+
+export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
