@@ -43,7 +43,7 @@ elif which rvm-prompt &> /dev/null; then # detect sysem-wide rvm installation
 elif which rbenv &> /dev/null; then # detect Simple Ruby Version management
   rvm_ruby='%{$PR_RED%}‹$(rbenv version | sed -e "s/ (set.*$//")›%{$PR_NO_COLOR%}'
 fi
-local git_branch='$(git_prompt_info)%{$PR_NO_COLOR%}'
+local git_branch='$(git_prompt_info)'
 
 #PROMPT="${user_host} ${current_dir} ${rvm_ruby} ${git_branch}$PR_PROMPT "
 PROMPT="╭─${user_host} ${current_dir} ${rvm_ruby} ${git_branch}
@@ -51,7 +51,7 @@ PROMPT="╭─${user_host} ${current_dir} ${rvm_ruby} ${git_branch}
 RPS1="${return_code}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$PR_YELLOW%}‹"
-ZSH_THEME_GIT_PROMPT_SUFFIX="$(git_remote_status)› %{$PR_NO_COLOR%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="› %{$PR_NO_COLOR%}"
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="%{$PR_MAGENTA%}↓%{$PR_NO_COLOR%}"
 ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE="%{$PR_MAGENTA%}↑%{$PR_NO_COLOR%}"
 ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="%{$PR_MAGENTA%}↕%{$PR_NO_COLOR%}"
