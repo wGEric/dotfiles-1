@@ -8,4 +8,4 @@ tags
 vendor/bundle
 coverage/
 .scss-lint.yml
-
+.idea
