@@ -6,14 +6,15 @@ Config { font = "xft:Source Code Pro:6"
                     , Run Memory ["-t","Mem: <usedratio>% <usedvbar>", "-L", "75", "-H", "90", "-l", "green", "-h", "red", "-n", "yellow"] 10
                     , Run Swap [] 10
                     , Run Date "%a %b %_d %l:%M" "date" 10
-                    , Run Network "wlan0" ["-t", "<rx>KB|<tx>KB"] 10
-                    , Run Wireless "wlan0" ["-t","Wifi: <essid> <qualityvbar>", "-L", "25", "-H", "50", "-h", "green", "-n", "yellow", "-l", "red"] 10
+                    , Run Network "wlan1" ["-t", "<rx>KB|<tx>KB"] 10
+                    , Run Wireless "wlan1" ["-t","wlan1: <essid> <qualityvbar>", "-L", "25", "-H", "50", "-h", "green", "-n", "yellow", "-l", "red"] 10
                     , Run Battery ["-t","Batt: <left>% <leftvbar> <acstatus>","-L","25","-H","50","-h","green","-n","yellow","-l","red", "--", "-O", "AC", "-o", "<timeleft>", "-f", "ADP0/online"] 10
                     , Run StdinReader
                     , Run Com "/bin/bash" ["-c", "~/.xmonad/get-volume"] "myvolume" 10
+                    , Run Com "/bin/bash" ["-c", "~/.xmonad/get-brightness"] "brightness" 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% | %memory% | %wlan0wi% %wlan0% | %battery% | Vol: %myvolume% | <fc=#ee9a00>%date%</fc> "
+       , template = "%StdinReader% }{ %cpu% | %memory% | %wlan1wi% %wlan1% | %battery% | Bright: %brightness% | Vol: %myvolume% | <fc=#ee9a00>%date%</fc> "
        }
 
