@@ -74,7 +74,8 @@ Bundle 'altercation/vim-colors-solarized'
 " Bundle 'Lokaltog/vim-powerline'
 "   let g:Powerline_cache_enabled = 1
 "   let g:Powerline_symbols = 'fancy'
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 let g:airline_theme             = 'powerlineish'
 let g:airline_enable_branch     = 1
 let g:airline_enable_syntastic  = 1
