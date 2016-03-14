@@ -1,0 +1,5 @@
+#!/bin/bash
+IN=`xbacklight -get`
+set -- "$IN" 
+IFS="."; declare -a Array=($*) 
+echo "${Array[0]}%" 

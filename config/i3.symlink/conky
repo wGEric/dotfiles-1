@@ -1,0 +1,52 @@
+#alignment top_left
+#background no
+#border_width 1
+cpu_avg_samples 2
+#default_color white
+#default_outline_color white
+#default_shade_color white
+#draw_borders no
+#draw_graph_borders yes
+#draw_outline no
+#draw_shades no
+#use_xft yes
+#xftfont DejaVu Sans Mono:size=12
+#minimum_size 5 5
+#net_avg_samples 2
+no_buffers yes
+out_to_console yes
+out_to_stderr no
+out_to_x no
+extra_newline no
+own_window no
+#own_window_class Conky
+#own_window_type desktop
+#stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer none
+#show_graph_scale no
+#show_graph_range no
+total_run_times 0
+
+TEXT
+[
+  { "full_text" : "CPU:", "separator" : false, "separator_block_width" : 9 },
+  { "full_text" : "${cpu}%", "color" : ${if_match ${cpu}>90}"\#ff0000"${else}${if_match ${cpu}>60}"\#ffff00"${else}"\#00ff00"${endif}${endif} },
+  { "full_text" : "Mem:", "separator": false, "separator_block_width" : 9 },
+  { "full_text" : "${memperc}%", "color" : ${if_match ${memperc}>90}"\#ff0000"${else}${if_match ${memperc}>75}"\#ffff00"${else}"\#00ff00"${endif}${endif} },
+  ${if_up eth0}{ "full_text" : "ethernet" },${endif}
+  ${if_up wlp58s0}{ "full_text" : "Wifi: ${wireless_essid} ${downspeed wlp58s0}↓ ${upspeed wlp58s0}↑", "separator": false, "separator_block_width" : 9 },
+  { "full_text" : "${wireless_link_qual_perc wlp58s0}%" },${endif}
+  { "full_text" : "Batt:", "separator" : false, "separator_block_width" : 9 },
+  { "full_text" : ${if_match "${acpiacadapter}"=="on-line"}"⚡"${else}"🔋"${endif}, "separator" : false, "separator_block_width" : 9 },
+  { "full_text" : "${battery_percent}%", "separator" : false, "separator_block_width" : 0, "color" : ${if_match ${battery_percent}<15}"\#ff0000"${else}${if_match ${battery_percent}<50}"\#ffff00"${else}"\#00ff00"${endif}${endif} },
+  { "full_text" : " ${battery_time}" },
+  { "full_text" : "Bright: ${exec ~/.config/i3/get-brightness}" },
+  { "full_text" : "Vol: ${exec ~/.config/i3/get-volume}" },
+  { "full_text" : "${time %a %b %_d %l:%M %p}", "color" : "\#ee9a00" }
+],
+#${if_up eno1}E ${upspeed eno1} ${downspeed eno1}|${endif}\
+#${if_up wlo1}W ${upspeed wlo1} ${downspeed wlo1}|${endif}\
+#B ${battery_percent}%|\
+#${time %H:%M:%S %d/%m}
