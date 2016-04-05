@@ -95,3 +95,8 @@ source $ZSH/oh-my-zsh.sh
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# extra custom stuff for specific computer
+if [ -f ~/.zshrc-custom ]; then
+    source ~/.zshrc-custom
+fi
