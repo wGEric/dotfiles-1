@@ -8,8 +8,9 @@ GIT_PS1_SHOWUPSTREAM="auto"
 
 __rbenv_ps1 ()
 {
-  rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
-  printf " (%s)" $rbenv_ruby_version
+#  rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
+#  printf " (%s)" $rbenv_ruby_version
+  printf ""
 }
 
 function prompt_command() {

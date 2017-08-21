@@ -126,6 +126,7 @@ Bundle 'tpope/vim-rails.git'
 
 " Javascript
 Bundle 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Bundle 'leshill/vim-json'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'kchmck/vim-coffee-script'
@@ -141,6 +142,7 @@ Bundle 'othree/html5.vim'
 "Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 "Bundle 'derekwyatt/vim-scala'
 Bundle 'leafgarland/typescript-vim'
+Plugin 'elixir-lang/vim-elixir'
 " =================================================
 "
 " =================== Others ======================
@@ -151,6 +153,7 @@ Bundle 'danro/rename.vim'
 "Plugin 'LucHermitte/local_vimrc'
 Bundle 'tpope/vim-speeddating'
 Bundle 'jceb/vim-orgmode'
+Plugin 'ap/vim-css-color'
 " =================================================
 if bundles_installed == 0
   echo "Installing Bundles, please ignore key map error messages"

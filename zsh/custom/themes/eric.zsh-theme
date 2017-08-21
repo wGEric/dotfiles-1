@@ -42,6 +42,8 @@ elif which rvm-prompt &> /dev/null; then # detect sysem-wide rvm installation
   rvm_ruby='%{$PR_RED%}‹$(rvm-prompt i v g s)›%{$PR_NO_COLOR%}'
 elif which rbenv &> /dev/null; then # detect Simple Ruby Version management
   rvm_ruby='%{$PR_RED%}‹$(rbenv version | sed -e "s/ (set.*$//")›%{$PR_NO_COLOR%}'
+elif which chruby &> /dev/null; then
+  rvm_ruby='%{$PR_RED%}‹$(chruby_prompt_info)›%{$PR_NO_COLOR%}'
 fi
 local git_branch='$(git_prompt_info)'
 
