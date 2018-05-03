@@ -14,18 +14,19 @@
 
 str=`amixer -D pulse sget Master`
 str1=${str#Simple*[}
-v1=${str1%%]*]}
+v1=`expr ${str1%%%*}`
 il=`expr index "$str1" [`
 o="off"
+med=33
+high=66
 mutel=''
-if [ ${str1:$il:3} == $o ]; then mutel='M'; fi
-s=${str1:0:1}
-str2=${str1#${str1:0:1}*[}
-str1=$str2
-str2=${str1#${str1:0:1}*[}
-ir=`expr index "$str2" [`
-muter=''
-if [ ${str2:$ir:3} == $o ]; then muter='🔇'; fi
-v2=${str2%\]}
-v=${v1}\ $muter
-echo $v
+printf "%s%% " $v1
+if [ ${str1:$il:3} == $o ]; then
+  printf '\xF0\x9F\x94\x87'
+elif [ $v1 -gt $high ]; then
+  printf '\xF0\x9F\x94\x8A'
+elif [ $v1 -gt $med ]; then
+  printf '\xF0\x9F\x94\x89'
+else
+  printf '\xF0\x9F\x94\x88'
+fi
