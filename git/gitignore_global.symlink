@@ -10,3 +10,4 @@ coverage/
 .scss-lint.yml
 .idea
 .tool-versions
+*.log

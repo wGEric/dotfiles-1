@@ -142,6 +142,7 @@ Bundle 'othree/html5.vim'
 "Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 "Bundle 'derekwyatt/vim-scala'
 Bundle 'leafgarland/typescript-vim'
+Plugin 'posva/vim-vue'
 Plugin 'elixir-lang/vim-elixir'
 " =================================================
 "
@@ -154,6 +155,7 @@ Bundle 'danro/rename.vim'
 Bundle 'tpope/vim-speeddating'
 Bundle 'jceb/vim-orgmode'
 Plugin 'ap/vim-css-color'
+Plugin 'fatih/vim-go'
 " =================================================
 if bundles_installed == 0
   echo "Installing Bundles, please ignore key map error messages"

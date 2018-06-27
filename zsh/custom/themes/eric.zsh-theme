@@ -46,9 +46,11 @@ elif which chruby &> /dev/null; then
   rvm_ruby='%{$PR_RED%}‹$(chruby_prompt_info)›%{$PR_NO_COLOR%}'
 fi
 local git_branch='$(git_prompt_info)'
+local kube='$(kube_ps1)'
+
 
 #PROMPT="${user_host} ${current_dir} ${rvm_ruby} ${git_branch}$PR_PROMPT "
-PROMPT="╭─${user_host} ${current_dir} ${rvm_ruby} ${git_branch}
+PROMPT="╭─${user_host} ${current_dir} ${rvm_ruby}${kube}${git_branch}
 ╰─$PR_PROMPT "
 RPS1="${return_code}"
 

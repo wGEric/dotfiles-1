@@ -17,4 +17,4 @@ function prompt_command() {
   PS1="${green}\u@\H${reset_color}: ${blue}\w${reset_color}${yellow}$(__rbenv_ps1)${reset_color}${red}$(__git_ps1)${reset_color}${reset_color}\$ "
 }
 
-PROMPT_COMMAND=prompt_command;
+prompt_command
