@@ -174,13 +174,22 @@ bindsym Control+mod1+l exec i3lock
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        #status_command i3status
-        status_command ~/.config/i3/conky-init.sh
-        tray_output primary
-        separator_symbol " | "
-#        position top
-#        verbose yes
-}
+#bar {
+#        #status_command i3status
+#        status_command ~/.config/i3/conky-init.sh
+#        tray_output primary
+#        separator_symbol " | "
+##        position top
+##        verbose yes
+#}
+
+# Start polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 focus_follows_mouse no
+
+# Start clipster daemon
+exec --no-startup-id clipster -d
+
+# shortcut to selection widget (primary)
+bindsym $mod+c exec clipster -sp
